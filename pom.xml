@@ -11,26 +11,26 @@
 	<url>http://maven.apache.org</url>
 
 	<dependencies>
-        <dependency>
-            <groupId>org.apache.openejb</groupId>
-            <artifactId>openejb-core</artifactId>
-            <version>3.1</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-        	<groupId>org.testng</groupId>
-        	<artifactId>testng</artifactId>
-        	<version>6.0.1</version>
-        	<type>jar</type>
-        	<scope>test</scope>
-        </dependency>
-        <dependency>
-        	<groupId>javaee</groupId>
-        	<artifactId>javaee-api</artifactId>
-        	<version>5</version>
-        	<type>pom</type>
-        	<scope>provided</scope>
-        </dependency>
+		<dependency>
+			<groupId>org.apache.openejb</groupId>
+			<artifactId>openejb-core</artifactId>
+			<version>3.1</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			<version>6.0.1</version>
+			<type>jar</type>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>javaee</groupId>
+			<artifactId>javaee-api</artifactId>
+			<version>5</version>
+			<type>pom</type>
+			<scope>provided</scope>
+		</dependency>
 	</dependencies>
 
 	<repositories>
@@ -38,6 +38,11 @@
 			<id>java.net</id>
 			<name>java.net</name>
 			<url>http://download.java.net/maven/2/</url>
+		</repository>
+		<repository> 
+			<id>dspace.org</id>
+			<name>dspace.org</name>
+			<url>http://maven.dspace.org/</url>
 		</repository>
 	</repositories>
 
