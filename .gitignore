@@ -1,6 +1,6 @@
 
-/.project
-/.settings
-/target
-/.classpath
-/test-output
+*.project
+*.settings
+*/target
+*.classpath
+*/test-output
