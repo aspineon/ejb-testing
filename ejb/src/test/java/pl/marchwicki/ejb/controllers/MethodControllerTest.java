@@ -20,23 +20,7 @@ public class MethodControllerTest {
 
 	@BeforeClass
 	public void setup() throws NamingException {
-		Properties props = new Properties();
-		props.setProperty(Context.INITIAL_CONTEXT_FACTORY,
-				"org.apache.openejb.client.LocalInitialContextFactory");
-		props.setProperty("openejb.deployments.classpath.include",
-				".*ejb-testing.*");
-		props.setProperty("ejb-testing-pu.hibernate.cache.provider_class",
-				"org.hibernate.cache.EhCacheProvider");
-		props.setProperty("ejb-testing-pu.hibernate.hbm2ddl.auto",
-				"create-drop");
-		props.setProperty("ejb-testing-pu.hibernate.dialect",
-				"org.hibernate.dialect.HSQLDialect");
-		props.setProperty("ejb-testing-pu.hibernate.show_sql", "true");
-		props.setProperty("ejb-testing-pu.hibernate.format_sql", "true");
-		props.setProperty("ejb-testing-pu.hibernate.use_sql_comments", "true");
-		props.setProperty("ejb-testing-pu.hibernate.jdbc.batch_size", "0");
-
-		InitialContext ctx = new InitialContext(props);
+		InitialContext ctx = new InitialContext();
 		controller = (MethodControllerLocal) ctx
 				.lookup("MethodControllerLocal");
 	}
