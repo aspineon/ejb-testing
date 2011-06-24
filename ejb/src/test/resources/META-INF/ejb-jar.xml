@@ -1,2 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ejb-jar/>
+<ejb-jar>
+	<enterprise-beans>
+	 	<session>
+	 		<ejb-name>CalculationFacade</ejb-name>
+	 		<business-local>pl.marchwicki.ejb.frontend.CalculationFacadeLocal</business-local>
+	 		<ejb-class>pl.marchwicki.ejb.frontend.CalculationFacade</ejb-class>
+	 		<session-type>Stateless</session-type>
+	 	</session>	
+	
+	 	<session>
+	 		<ejb-name>StringToArrayMappingService</ejb-name>
+	 		<business-local>pl.marchwicki.ejb.frontend.StringToArrayMappingServiceLocal</business-local>
+	 		<ejb-class>pl.marchwicki.ejb.frontend.StringToArrayMappingService</ejb-class>
+	 		<session-type>Stateless</session-type>
+	 	</session>	
+	
+	 	<session>
+	 		<ejb-name>DisplaySettings</ejb-name>
+	 		<business-local>pl.marchwicki.ejb.view.configuration.DisplaySettingsMBean</business-local>
+	 		<ejb-class>pl.marchwicki.ejb.view.configuration.DisplaySettings</ejb-class>
+	 		<session-type>Stateless</session-type>
+	 		
+	 		<env-entry>
+	        	<description>Display Template</description>
+	        	<env-entry-name>displayTemplate</env-entry-name>
+	        	<env-entry-type>java.lang.String</env-entry-type>
+	        	<env-entry-value>-------# {} #-------</env-entry-value>
+ 	        	<injection-target>
+	        		<injection-target-class>pl.marchwicki.ejb.view.configuration.DisplaySettings</injection-target-class>
+	        		<injection-target-name>displayTemplate</injection-target-name>
+	        	</injection-target>
+	      	</env-entry>
+      	</session>
+	</enterprise-beans>
+</ejb-jar>

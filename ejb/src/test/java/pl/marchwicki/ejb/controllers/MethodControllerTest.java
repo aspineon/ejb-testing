@@ -1,17 +1,12 @@
 package pl.marchwicki.ejb.controllers;
 
-import java.util.Properties;
-
-import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
 
-import junit.framework.Assert;
-
+import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import pl.marchwicki.ejb.controllers.MethodControllerLocal;
 import pl.marchwicki.ejb.controllers.MethodControllerLocal.Operator;
 
 public class MethodControllerTest {
