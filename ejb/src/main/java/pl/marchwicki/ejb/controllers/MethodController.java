@@ -31,6 +31,7 @@ public class MethodController implements MethodControllerLocal {
 			
 			if (Operator.ADD.equals(operation)) {
 				int result = calculatingService.add(numbers);
+				logger.debug("displayingService implementation [" + displayingService + "]");
 				displayingService.print("Result of " + operation + " operation is: " + result);
 			} else {
 				return "501 Not Implemented";

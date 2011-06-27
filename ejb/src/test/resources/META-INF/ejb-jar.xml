@@ -13,7 +13,7 @@
 	 		<business-local>pl.marchwicki.ejb.frontend.StringToArrayMappingServiceLocal</business-local>
 	 		<ejb-class>pl.marchwicki.ejb.frontend.StringToArrayMappingService</ejb-class>
 	 		<session-type>Stateless</session-type>
-	 	</session>	
+	 	</session>
 	
 	 	<session>
 	 		<ejb-name>DisplaySettings</ejb-name>
@@ -32,5 +32,6 @@
 	        	</injection-target>
 	      	</env-entry>
       	</session>
+      	
 	</enterprise-beans>
 </ejb-jar>
