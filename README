@@ -1,2 +1,4 @@
-A sample, maven2 project for the EJB testing blog post (http://www.marchwicki.pl/blog/tag/testing/).
- 
+A sample, maven2 project for the EJB testing blog post (http://www.marchwicki.pl/blog/tag/openejb/).
+
+This code features OpenEJB and show some tips and tricks on how to handle end-to-end integration of EJB application: bootstrapping the container, overriding properties with jndi.properties (for example for persistence.xml), deploying vendor specific code (extensions) with ejb-jar.xml
+Code is working, test and deployable to JBoss 4.x 
