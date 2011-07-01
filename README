@@ -1,2 +1,3 @@
 A sample, maven2 project for the EJB testing blog post (http://www.marchwicki.pl/blog/tag/testing/).
  
+This branch contains examples on how to use the inner class to drive testing, not needing to scan classpath and bootstrap the whole application. Very handy for focused integration testing. Fast, clean and efficient way to test the EJB services.
