@@ -199,16 +199,6 @@ public abstract class AbstractOpenEJBTestNG {
             }
         }
 
-        // Application is final in AppModule, which is fine, so we'll create a new one and move everything
-//        if (application != null) {
-//            final AppModule newModule = new AppModule(appModule.getClassLoader(), appModule.getModuleId(), application, false);
-//            newModule.getClientModules().addAll(appModule.getClientModules());
-//            newModule.getPersistenceModules().addAll(appModule.getPersistenceModules());
-//            newModule.getEjbModules().addAll(appModule.getEjbModules());
-//            newModule.getConnectorModules().addAll(appModule.getConnectorModules());
-//            appModule = newModule;
-//        }
-
         // For the moment we just take the first @Configuration method
         // maybe later we can add something fancy to allow multiple configurations using a qualifier
         // as a sort of altDD/altConfig concept.  Say for example the altDD prefix might be "foo",
