@@ -1,25 +1,32 @@
 package pl.marchwicki.ejb.controllers;
 
-import javax.naming.InitialContext;
-import javax.naming.NamingException;
+import javax.ejb.EJB;
 
+import org.apache.openejb.jee.EjbJar;
+import org.apache.openejb.jee.StatelessBean;
+import org.apache.openejb.junit.Module;
+import org.apache.openejb.testng.AbstractOpenEJBTestNG;
 import org.testng.Assert;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
+import pl.marchwicki.ejb.business.CalculatingService;
 import pl.marchwicki.ejb.controllers.MethodControllerLocal.Operator;
+import pl.marchwicki.ejb.view.TestingDisplayingService;
 
-public class MethodControllerTest {
+public class MethodControllerTest extends AbstractOpenEJBTestNG {
 
+	@EJB
 	MethodControllerLocal controller;
 
-	@BeforeClass
-	public void setup() throws NamingException {
-		InitialContext ctx = new InitialContext();
-		controller = (MethodControllerLocal) ctx
-				.lookup("MethodControllerLocal");
+	@Module
+	public EjbJar beans() {
+        EjbJar ejbJar = new EjbJar("calculation-beans");
+        ejbJar.addEnterpriseBean(new StatelessBean(TestingDisplayingService.class));
+        ejbJar.addEnterpriseBean(new StatelessBean(CalculatingService.class));
+        ejbJar.addEnterpriseBean(new StatelessBean(MethodController.class));
+        return ejbJar;		
 	}
-
+	
 	@Test
 	public void notSupportedOperation() {
 		String calculate = controller.calculate(Operator.MULTIPLY,
